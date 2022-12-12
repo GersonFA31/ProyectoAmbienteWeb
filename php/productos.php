@@ -1,13 +1,11 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root", "", "TechnoExpress"); 
+$conexion = mysqli_connect("localhost", "root", "", "technoexpress",3308); 
 $sql = "SELECT * FROM productos";
 
 $respuesta = mysqli_query($conexion, $sql);
 
-
-
-/if (mysqli_num_rows($respuesta) > 0){
+if (mysqli_num_rows($respuesta) > 0){
 
     $arreglo = array();
 
@@ -18,6 +16,5 @@ $respuesta = mysqli_query($conexion, $sql);
     echo json_encode($arreglo);
 
 } else {
-    echo json_encode("Sin Registros");
-} 
-
+    echo json_encode("Sin Registros");
+}

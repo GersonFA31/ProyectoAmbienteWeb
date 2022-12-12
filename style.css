@@ -36,20 +36,86 @@ body {
 }
 
 .contenedor {
+    align-items: center;
     background-color: var(--blue_purple);
     width: 1200px;
     margin: auto;
 }
 
 .boton {
-    color: var(--blanco);
-    background-color: green;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: var(--claret);
     font-size: 20px;
     padding: 10px 30px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
+    border-color: var(--claret);
+}
+
+.boton-enviar {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: var(--claret);
+    font-size: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: var(--claret);
+    width: 10%;
+}
+
+.boton-delete {
+    color: white;
+    background-color: var(--claret2);
+    font-size: 20px;
+    padding: 5px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.boton-logout {
+    color: white;
+    background-color: var(--claret2);
+    font-size: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.boton-carrito {
+    color: var(--prussian_blue);
+    background-color: var(--turquesa2);
+    font-size: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: var(--claret);
+    align-items: center;
+    margin-left: 30%;
+}
+
+input {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    width: 40%;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    background-color: var(--contenido);
+    border: none;
+    box-shadow: 0px 0px 10px 1px var(--claret);
+    border-radius: 50px;
 }
 
 /* Fin General */
@@ -239,7 +305,8 @@ nav a:focus {
     height: 100%;
     width: 100%;
     background-color: rgba(49, 49, 49, 0.5);
-    color: var(--blanco);
+    color: white;
+
 
     display: flex;
     flex-direction: column;
@@ -250,6 +317,12 @@ nav a:focus {
 .info p {
     text-align: center;
     padding: 10px;
+    font-size: 25px;
+}
+
+.info h2 {
+    font-size: 25px;
+    line-height: 40px;
 }
 
 /* Fin Informacion */
@@ -257,6 +330,16 @@ nav a:focus {
 /* Servicios */
 
 .contenido {
+    background-color: rgba(49, 49, 49, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 0px var(--claret);
+    /* box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.5); */
+}
+
+.contenido-lista {
+    align-items: center;
     background-color: rgba(49, 49, 49, 0.5);
     padding: 20px;
     margin-top: 20px;
@@ -301,75 +384,12 @@ nav a:focus {
 /* Productos  */
 
 .productos {
+    margin-left: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-}
+    row-gap: 45%;
 
-.producto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid var(--negro) 2px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.producto p {
-    color: var(--primary);
-    font-weight: bold;
-    font-size: larger;
-}
-
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
-.productos h2,
-h4,
-p,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-.productos h2,
-h4 {
-    text-transform: uppercase;
-    color: var(--white)
-}
-
-.productos h2 {
-    font-size: 27px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    margin-bottom: 10px;
-}
-
-.productos p,
-li {
-    font-weight: 400;
-    color: white;
-    line-height: 22px;
-}
-
-.productos ul,
-li {
-    text-decoration: none;
-    list-style: disc outside;
-}
-
-.productos ul {
-    padding-left: 20px;
-}
-
-.productos svg {
-    margin: 0px;
-    min-width: 24px;
-    min-height: 24px;
 }
 
 .cardContainer {
@@ -382,15 +402,18 @@ li {
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
+
 }
 
 .active {
     -webkit-transform: translateZ(0px) rotateY(180deg) !important;
     transform: translateZ(0px) rotateY(180deg) !important;
+
 }
 
 .active:after {
     display: none;
+
 }
 
 .card {
@@ -405,6 +428,7 @@ li {
     -webkit-transform: translateZ(-100px);
     transform: translateZ(-100px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
 
 .card:after {
@@ -417,15 +441,18 @@ li {
     box-shadow: 0 14px 50px -4px var(--claret);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+
 }
 
 .card:hover {
     -webkit-transform: translateZ(0px);
     transform: translateZ(0px);
+
 }
 
 .card:hover:after {
     opacity: 1;
+
 }
 
 .card .side {
@@ -436,6 +463,7 @@ li {
     height: 100%;
     border-radius: 5px;
     background-color: var(--contenido);
+
 }
 
 .card .front {
@@ -445,16 +473,19 @@ li {
 .card .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+
 }
 
 .card .info {
     padding: 16px;
     display: flex;
     flex-direction: column;
+
 }
 
 .card .info p {
     margin: 150px;
+
 }
 
 .front .img {
@@ -464,14 +495,11 @@ li {
     border-radius: 5px 5px 0 0;
     width: 100%;
     height: 350px;
+
 }
 
 .front .img1 {
     background-image: url(img/productos/gskill-aegis-8-gb-ddr4-3200.jpg);
-}
-
-.front .img2 {
-    background-image: url(img/productos/msi-n210-1-gb.jpg);
 }
 
 /* Fin Productos  */
@@ -525,7 +553,7 @@ li {
     margin-top: 100px;
     margin-left: 900px;
     position: absolute;
-    border: white solid 2px;
+    border: white solid 4px;
     border-radius: 15px;
     width: 2px;
     height: 200px;
@@ -533,7 +561,7 @@ li {
 
 .contenedor_ofrecemos {
     height: 600px;
-    box-shadow: 0px 4px 20px 0px  var(--claret);
+    box-shadow: 0px 4px 20px 0px var(--claret);
 }
 
 
@@ -643,8 +671,19 @@ li {
     width: 100%;
     padding: 20px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 5px 15px 0px var(--claret);
+}
+
+.form_info {
+    background-color: var(--contenido);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 5px 15px 0px var(--claret);
 }
 
 .form legend {
@@ -658,12 +697,16 @@ li {
 
 .form_campo {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.form_campo label {
+.form label {
     align-items: left;
-    color: var(--blanco);
-    display: block;
+    color: white;
+    display: flex;
     margin-bottom: 10px;
 }
 
@@ -676,6 +719,13 @@ li {
 
 .form_campo textarea {
     height: 150px;
+}
+
+.info_tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 ::placeholder {
@@ -710,6 +760,7 @@ iframe {
 .perfil {
     text-align: center;
     align-items: center;
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
     background-color: rgba(49, 49, 49, 0.5);
@@ -717,17 +768,15 @@ iframe {
     margin-top: 20px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 0px var(--claret);
+    font-size: 20px;
 }
 
 .perfil a {
     color: var(--turquesa2);
-
-
 }
 
 .perfil a:hover {
     color: var(--turquesa);
-    font-size: 17px;
 }
 
 .perfil input {
@@ -741,6 +790,19 @@ iframe {
     border: none;
     box-shadow: 0px 0px 10px 1px var(--claret);
     border-radius: 50px;
+    margin: 20px;
+}
+
+.perfil button {
+    line-height: 22px;
+    margin: 25px;
+    width: 60%;
+}
+
+.perfil-icon {
+    margin: 15px;
+    width: 120px;
+    height: 120px;
 }
 
 .circulo {
@@ -872,4 +934,66 @@ iframe {
     margin-bottom: 0;
 }
 
+.usuario-footer {
+    color: var(--claret);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 /* Fin Footer  */
+
+/* Tablas */
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px var(--prussian_blue);
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: var(--contenido);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--claret);
+}
+
+
+tbody tr:hover {
+    background-color: var(--body-bg);
+}
+
+td :hover:before {
+    position: relative;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    z-index: -1;
+}
+
+table img {
+    width: 240px;
+    height: 240px;
+}
+
+.totPag {
+    margin: 50px;
+    font-size: 20px;
+}
+
+/* FIN TABLAS */
